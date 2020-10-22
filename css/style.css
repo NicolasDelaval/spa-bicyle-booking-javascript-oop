@@ -1,0 +1,712 @@
+/*0. Loading Fonts*/
+@font-face
+{
+  font-family: "FontAwsome";
+  src: url("../fonts/fa-solid-900.eot") format("embededded-opentype");
+  src: url("../fonts/fa-solid-900.svg") format("svg");
+  src: url("../fonts/fa-solid-900.ttf") format("truetype");
+  src: url("../fonts/fa-solid-900.woff") format("woff");
+  src: url("../fonts/fa-solid-900.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/*1.0 Body Styling*/
+body{
+	height: auto;
+	width: 100%;
+	margin: 0;
+	background-color: #FAFAFA;
+	font-family: "Arial";
+	position: relative;
+}
+/*2. Main Container Styling*/
+#mainContainer {
+	position: relative;
+	min-height: 100%;
+	width: 1400px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	background-color: white;
+}
+/*3. Header Section*/
+/*3.1 Header Styling*/
+header{
+	height: 200px;
+	max-width: 100%;
+	border-bottom: 1px solid #FAFAFA;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(".././medias/header/nantes.jpg") no-repeat left, url(".././medias/header/nantes-3.jpg") no-repeat center, url(".././medias/header/nantes-2.jpg") no-repeat right;
+	background-size: 33.3333333% 100%, 33.3333333% 100%, 33.3333333% 100%;
+}
+/*3.2 City Logo Styling*/
+header img{
+	position: relative;
+	top:20px;
+	left: 10px;
+	width:110px;
+	height: 35px;
+	border-radius: 5px;
+}
+/*3.3 H1 Styling*/
+h1{	
+	position: relative;
+	top: 10px;
+	font-family: "arial";
+	text-align: center;
+	font-size: 2.5em;
+	color: white;	
+}
+/*3.4 Show/Hide Carousel Button Styling*/
+#displayCarousel{
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	padding: 5px;
+	border : 1px solid #5CADD3;
+	border-radius: 5px;
+	box-shadow: 0px 0px 3px #5CADD3;
+	background-color: #5CADD3;
+	font-family: "Arial";
+	color: white;
+	font-size: 0.9em;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#displayCarousel:hover{
+	opacity: 0.9;
+}
+
+/*4. Carousel Section */
+/*4.1 Carousel Container Styling*/
+#carouselContainer{
+	position: relative;
+	margin: auto;
+	left: 0;
+	right: 0;
+	margin-top: 25px;
+	width: 100%;
+	height: 450px;
+	margin-bottom: 75px;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 8px 8px 5px grey;
+}
+/*4.2 Carousel's Slide Styling*/
+.slide{
+	position: absolute;
+	top: 0px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	padding-top: 15px;
+	width: 600px;
+	height: 425px;
+}
+/*4.3 Carousel's Slide Img Styling*/
+.slide img{
+	display: block;
+	position: relative;
+	top: 0px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 325px;
+}
+/*4.4 Carousel's Slide Caption Styling*/
+.caption{
+	position: relative;
+	top: 20px;
+	text-align: center;
+	font-size: 1em;
+	font-weight: bold;
+}
+/*4.5 Nav Buttons Group Styling*/
+#control_button_group{
+	display: inline;
+	position: absolute;
+	top : 470px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	width: 200px;
+}
+/*4.6 Nav Buttons Styling*/
+#prev, #next, #pause, #play{
+	position: absolute;
+	margin: auto;
+	left:0;
+	right:0;
+	border: 0px;
+	background-color: white;
+	font-family: "FontAwsome";
+	color: black;
+	cursor: pointer;
+}
+
+#prev:hover, #next:hover, #pause:hover, #play:hover{
+	opacity: 0.8;
+}
+
+#prev{
+	right: 150px;
+	bottom: 25px;
+}
+
+#prev::before{
+	content: "\f104";
+	font-size: 4em;
+}
+
+#play{
+	bottom: 35px;
+	width: 2.5em;
+}
+
+#play::before{
+	content: "\f04b";
+	font-size: 2.5em;
+}
+
+#pause{
+	bottom: 35px;
+	width: 2.5em;
+}
+
+#pause::before{
+	content: "\f04c";
+	font-size: 2.5em;
+}
+
+#next{
+	left: 150px;
+	bottom: 25px;
+}
+
+#next::before{
+	content: "\f105";
+	font-size: 4em;
+}
+
+/*5. Booking Zone Styling*/
+#bookingZone{
+	display: inline-flex;
+	position: relative;
+	height: 700px;
+	margin-bottom: 75px;
+}
+/*5.1 Map Styling*/
+#map{
+	position: relative;
+	height: 700px;
+	width: 1400px;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 8px 8px 5px grey;
+	margin-bottom: 100px;
+}
+/*5.2 Form Icons Styling*/
+.icoStation::before{
+	position: relative;
+	left : -5px;
+	font-family: 'FontAwsome';
+	font-size: 1em;
+	content: "\f277";
+}
+
+.icoAdress::before{
+	position: relative;
+	left : -5px;
+	font-family: 'FontAwsome';
+	font-size: 1em;
+	content: "\f279";
+}
+
+.icoVelo::before{
+	position: relative;
+	left : -5px;
+	font-family: 'FontAwsome';
+	font-size: 1em;
+	content: "\f206";
+}
+
+.icoParking::before{
+	position: relative;
+	left : -5px;
+	font-family: 'FontAwsome';
+	font-size: 1em;
+	content: "\f05a";
+}
+
+.icoName::before{
+	position: relative;
+	left : -5px;
+	font-family: 'FontAwsome';
+	font-size: 1em;
+	content: "\f007";
+}
+/*5.3 Form Styling*/
+form {
+	height: 350px;
+	width: 450px;
+	position: relative;
+	right : -45px;
+}
+/*5.4 Fieldset Styling*/
+fieldset {
+	box-shadow: 2.5px 3px black;
+	border-radius: 5px;
+	width: 400px;
+	height: 300px;
+	background-color: #EBEBEB;
+	box-shadow: 8px 8px 5px grey;
+}
+
+label{
+  display: inline-block;
+  width: 90px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+fieldset legend{
+	font-weight: bold;
+}
+
+fieldset input {
+	width: 160px;
+}
+
+.icoStation, .icoAdress, .icoVelo, .icoParking{
+	font-weight: bold;
+	font-size: 1em;
+}
+
+.nom, .adresse, .nbvelosdispos, .nbplace{
+	font-weight: normal;
+	font-size: 0.9em;
+}
+
+#reserver{
+	position: absolute;
+	top: 272px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	height: 35px;
+	width: 160px;
+	padding: 5px;
+	border: 1px solid green;
+	background-color: green;
+	box-shadow: 0px 0px 3px green;
+	border-radius: 10px;
+	font-size: 0.9em;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#reserver:hover{
+	opacity: 0.9;
+}
+
+.cantbook{
+	text-align: center; 
+}
+/*6. Canvas Styling*/
+/*6.1 Canvas Container Styling*/
+#canvas_container{
+	position: relative;
+	top: 350px;
+	right : 405px;
+	height: 300px;
+	width: 430px;
+	background-color: #5CADD3;
+	border: 1px solid #5CADD3;
+	border-radius: 5px;
+	box-shadow: 8px 8px 5px grey;
+}
+
+#canvas_container h2{
+	font-family: "Arial";
+	font-size: 1em;
+	color: white;
+	text-align: center;
+}
+/*6.2 Signature Aera Styling*/
+#myCanvas{
+	position: relative;
+	left: 65px;
+	background-color: #EBEBEB;
+}
+/*6.3 Blank Canvas Used For Signature Control Styling*/
+#myCanvasBlank{
+	display: none;
+}
+/*6.4 Canvas Control Buttons Styling*/
+#confirm, #erase_sign, #cancel_sign{
+	position: absolute;
+	top: 255px;
+	width: 90px;
+	height: 35px;
+	border-radius: 5px;
+	padding: 5px;
+	cursor: pointer;
+	text-align: center;
+	font-family: "Arial";
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+#confirm{
+	left: 30px;
+	background-color: green;
+	border : 1px solid green;
+	box-shadow: 0px 0px 3px green;
+	color: white;	
+}
+
+#erase_sign{
+	left: 175px;
+	background-color: orange;
+	border : 1px solid orange;
+	box-shadow: 0px 0px 3px orange;
+	color : white;
+}
+
+#cancel_sign{
+	left: 310px;
+	background-color: red;
+	border : 1px solid red;
+	box-shadow: 0px 0px 3px red;
+	color: white;
+}
+
+#confirm:hover, #erase_sign:hover, #cancel_sign:hover{
+	opacity: 0.9;
+}
+
+/*7. Footer Section : Your Booking Section*/
+#your_booking{
+	display: flex;
+	flex-direction: column;
+	background-color: #EBEBEB;
+	border: 1px solid black;
+	border-radius: 5px;
+	height: 165px;
+	max-width: 1400px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	margin-bottom: 5px;
+}
+/*7.1 H2 Styling*/
+#your_booking h2{
+	margin: 3px;
+	padding: 2px;
+	font-size: 1.3em;
+	font-weight: bold;
+	text-align: center;
+	color: black;
+	height: 25px;
+}
+/*7.2 Booking Msg Zone Styling*/
+#your_booking_msg_zone{
+	background-color: #5CADD3;
+	height: 120px;
+}
+
+#your_booking p{
+	position: relative;
+	top: 5px;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+	line-height: 45px;
+	color: white;
+}
+/*7.3 Cancel Booking Button Styling*/
+#cancel_booking{
+	position: relative;
+	bottom: 20px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	margin-top: 10px;
+	width: 200px;
+	height: 35px;
+	padding: 5px;
+	border: 1px solid red;
+	background-color: red;
+	box-shadow: 0px 0px 3px red;
+	border-radius: 10px;
+	font-size: 0.9em;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#cancel_booking:hover{
+	opacity: 0.9;
+}
+
+/*Responsive Design*/
+/*Common Styling From Smartphone to Small Desktop Computer*/
+@media screen and (min-width : 320px) and (max-width: 1399px){
+	#mainContainer{
+		display : flex;
+		flex-direction : column;
+		height: auto;
+	}
+
+	#bookingZone{
+		display : flex;
+		flex-direction : column;
+	}
+}
+/*Small Device Design For Smartphone And Phablets*/
+@media screen and (min-width : 320px) and (max-width: 768px){
+	/*0.General Styling For Small Mobile Devices*/
+	#mainContainer{
+		width: 100%;
+		height: auto;
+	}
+	/*1.0 Header Styling For Small Mobile Devices*/
+	header{
+		height: 100px;
+		max-width: 100%;
+	}
+
+	header h1{
+		top: 7px;
+		font-size: 0.9em;
+	}
+
+	header img{
+		top: 5px;
+		left: 0px;
+		height : 25px;
+		width: 50px;
+	}
+
+	#displayCarousel{
+		top: 5px;
+		height:25px;
+		font-size: 0.7em;
+	}
+	/*2.0 Carousel Styling For Small Mobile Devices*/
+	#carouselContainer{
+		top: 0px;
+		margin-top: 25px;
+		margin-bottom: 30px;
+		width: 300px;
+		height: 335px;
+	}
+
+	.slide{
+		height: 335px;
+		width: 100%;
+	}
+
+	.slide img{
+		height: 200px;
+	}
+
+	.caption{
+		height: 50px;
+		font-size: 0.9em;
+	}
+
+	#control_button_group{
+		top: 350px;
+	}
+	/*3.0 Booking Zone Styling For Small Mobile Devices*/
+	#bookingZone{
+		height: auto;
+		top: 0px;
+		width: 100%;
+		margin-bottom: 50px;	
+	}
+	/*3.1 Map Styling For Small Mobile Devices*/
+	#map{
+		width: 95%;
+		height: 700px;
+		margin: auto;
+		left: 0;
+		right: 0;
+		margin-bottom: 50px;
+	}
+	/*3.2 Form Styling For Small Mobile Devices*/
+	form{
+		margin: auto;
+		left: 0;
+		right: 0;
+		width: 300px;
+		margin-bottom: 50px;
+	}
+
+	fieldset{
+		width: 90%;
+	}
+
+	#reserver{
+		font-size: 0.7em;
+		left: 30px;
+		width: 100px;
+	}
+
+	#cancel_booking{
+		font-size: 0.7em;
+		top:80px;
+		right: 30px;
+		width: 100px;
+	}
+	/*4.0 Canvas Styling For Small Mobile Devices*/
+	#canvas_container{
+		top: -15px;
+		margin: auto;
+		left: 0;
+		right: 0;
+		width: 300px;
+		min-height: 325px;
+		margin-bottom: 50px;
+	}
+
+	#myCanvas{
+		margin: auto;
+		left: 0px;
+		right: 0;
+	}
+
+	#confirm, #erase_sign, #cancel_sign{
+		top : 282px;
+		height: 25px;
+		font-size: 0.7em;
+	}
+
+	#confirm{
+		left: 5px;
+	}
+
+	#erase_sign{
+		left: 105px;
+	}
+
+	#cancel_sign{
+		left: 205px;
+	}
+
+	#cancel_booking{
+		position: relative;
+		width: 135px;
+		height: 25px;
+		top: 0px;
+	}
+	/*5.0 Footer Styling For Small Mobile Devices*/
+	#your_booking{
+		height: 115px;
+	}
+
+	#your_booking h2{
+		height: 25px;
+		font-size: 1em;
+	}
+
+	#your_booking_msg_zone{
+		height: 145px;
+	}
+
+	#your_booking p{
+		font-size: 0.8em;
+		line-height: 12px;
+		vertical-align: middle;
+	}
+}
+/*Tablets, Laptops And Small Desktop Computer Design*/
+@media screen and (min-width : 769px) and (max-width: 1399px){
+	/*0. General Styling For Tablet And Small Computers*/
+	#mainContainer{
+		width: 100%;
+		height: auto;
+	}
+	/*1.0 Header Styling For Tablets And Small Computers*/
+	header{
+		height: 150px;
+		max-width: 100%;
+	}
+
+	header h1{
+		top: 10px;
+		font-size: 1.5em;
+	}
+
+	header img{
+		top: 15px;
+		left: 0px;
+	}
+
+	#displayCarousel{
+		top: 15px;
+		height:25px;
+		font-size: 0.7em;
+	}
+	/*2.0 Carousel Container Styling For Tablets And Small Computers*/
+	#carouselContainer{
+		width: 99%;
+	}
+	
+	/*3.0 Booking Zone Styling For Tablets And Small Computers*/
+	#bookingZone{
+		height: auto;
+		top: 0px;
+		margin-bottom: 50px;
+		width: 100%;	
+	}
+	/*3.1 Map Styling For Tablets And Small Computers*/
+	#map{
+		margin: auto;
+		left: 0;
+		right: 0;
+		width: 98%;
+		min-height: 650px;
+		margin-bottom: 50px;
+	}
+	/*3.2 Form Styling For Tablets And Small Computers*/
+	form{
+		margin: auto;
+		left: 0;
+		right: 0;
+	}
+
+	fieldset{
+		width: 90%;
+	}
+	/*4.0 Canvas Styling For Tablets And Small Computers*/
+	#canvas_container{
+		top: 50px;
+		margin: auto;
+		left: 0;
+		right: 0;
+		min-height: 300px;
+	}
+
+	#confirm, #erase_sign, #cancel_sign{
+		top: 256px;
+	}
+	/*5.0 Footer Section Styling For Tablets and Small computers*/
+	#your_booking p{
+		font-size: 1em;
+	}
+
+	#cancel_booking{
+		position: relative;
+		top: -9px;
+	}
+}
+
+/*@media screen and (min-width: 2559px){
+	#mainContainer{
+		height: 1350px;
+	}
+}*/

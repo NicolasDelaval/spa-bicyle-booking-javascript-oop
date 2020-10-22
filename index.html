@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Bisiklet : Réservation en ligne de vélos sur Nantes</title>
+        <meta name="description" content="Bisiklet, la solution la plus simple et pratique pour louer un vélo en ligne sur la ville de Nantes." />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="shortcut icon" type="image/ico" href="medias/favicon/favicon.ico" />
+    </head>
+    <body>
+
+        <!--Header-->
+        <header>
+            <img src="medias/header/logo_ville_nantes.png" alt="Le logo de la ville de Nantes">
+            <h1>BISIKLET : votre solution de réservation de vélos en ligne sur Nantes!</h1>
+            <button id=displayCarousel>Masquer l'aide</button>
+        </header>
+
+        <div id="mainContainer">
+            <!--Carousel Container-->
+            <div id="carouselContainer">
+                <!--Slides du carousel-->
+                <div class="slide" id="a">
+                    <img src="medias/slider/a.png" alt="Pick a station">
+                    <div class="caption">1- Sélectionnez une station</div>
+                </div>
+                <div class="slide" id="b">
+                    <img src="medias/slider/b.png" alt="Cantbook">
+                    <div class="caption">2- Il n'est pas possible de réserver une station en rouge</div>
+                </div>
+                <div class="slide" id="c">
+                    <img src="medias/slider/c.png" alt="Write your Id">
+                    <div class="caption">3- Renseignez votre nom et prénom</div>
+                </div>
+                <div class="slide" id="d">
+                    <img src="medias/slider/d.png" alt="Sign to confirm booking">
+                    <div class="caption">4- Pour finaliser votre réservation, signez et cliquez sur le bouton "Confirmer"</div>
+                </div>
+                <!--Boutons de navigation-->
+                <div id="control_button_group">
+                    <button id="prev"></button>
+                    <button id="play"></button>
+                    <button id="pause"> </button>
+                    <button id="next"> </button>
+                </div>
+            </div>
+
+            <div id=bookingZone>
+                <div id="map"></div>
+                <form>
+                    <fieldset>
+                        <legend>Détails de la station</legend>
+                        <p><span class="icoStation">Station</span> : <span class="nom"></span></p>
+                        <p><span class="icoAdress">Adresse</span>: <span class="adresse"></span></p>
+                        <p><span class="icoVelo">Vélos disponibles</span> : <span class="nbvelosdispos"></span></p>
+                        <p><span class="icoParking">Stationnements disponibles</span>: <span class="nbplace"></span></p>
+                        <label><span class="icoName">Nom :</span></label><input type="text" name="nom" placeholder="Renseignez votre nom" id="last_name"><br><br>
+                        <label><span class="icoName">Prénom :</span></label><input type="text" name="prénom" placeholder="Renseignez votre prénom" id="first_name">
+                        <button id="reserver" type="button">Réserver</button><br><br>
+                        <div class="cantbook">
+                        <p><span class id="bookingImpossibleMsg"></span></p>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <div id="canvas_container">
+                    <h2>Signez pour confirmer votre réservation</h2>
+                    <canvas id="myCanvas" height="200" width="300"></canvas>
+                    <canvas id="myCanvasBlank" height="200" width="300"></canvas>
+                    <button id="confirm">Confirmer</button>
+                    <button id="erase_sign">Effacer</button>
+                    <button id="cancel_sign">Retour</button>
+                </div>
+            </div>
+        </div>
+        <div id="your_booking">
+                <h2>Votre réservation</h2>
+                <div id="your_booking_msg_zone">
+                    <p><span class="booking_msg">Pas de réservation en cours</span><span class="countdown_msg"></span></p>
+                    <button id="cancel_booking" type="button">Annuler Réservation</button>
+                </div>
+        </div>
+        <script src="js/p3ToolsScript/jquery.js"></script>
+        <script src="js/p3ToolsScript/ajaxget.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFdGq0NzDO-aJ-Ng6yZhM52lZiwrj8uaA"></script>
+        <script src="js/p3ToolsScript/markerclusterer.js"></script>
+        <script src="js/script.js" defer></script>
+    </body>
+</html>
